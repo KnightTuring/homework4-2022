@@ -1,0 +1,173 @@
+/* Requirement 1 */
+body {
+    font-family: 'Poppins', serif;
+    /* Font size can be reduced to ensure the 1st and 3rd cards are of the same height */
+    /* font-size: 15pt; */
+    background-image: url(../images/concrete_seamless.png);
+    background-color: #f1f1f1;
+}
+
+/* Requirement 2 */
+body > header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Requirement 3 */
+.nav_links {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Requirement 4 */
+a {
+    color: blue;
+}
+
+/* Requirement 5 */
+.card > header {
+    background-color: #288088;
+    border: 2px solid #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    justify-content: center;
+}
+
+/* Fix the white background border radius so that it is in line with the card header background radius */
+.card {
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.card li header {
+    background-color: #ffff;
+    border: none;
+    border-bottom: 2px solid #45ADAD;
+}
+
+/* Requirement 7 */
+.pricing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Requirement 8 */
+.card {
+    flex-basis: 450px;
+}
+.card header {
+    display: flex;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img {
+    border: 10px solid  #50C7C7;
+    width: 300px;
+    margin: 10px;
+}
+
+#logo {
+    animation: custommove 5s 1;
+}
+
+@keyframes custommove {
+    from {
+        width: 25px;
+        opacity: 0;
+    }
+
+    to {
+        width: 475px;
+        opacity: 1;
+    }
+    
+}
+
+.nav_links {
+    display: flex;
+}
+
+
+
+@media screen and (min-width: 900px) {
+
+    body > header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav_links {
+        flex-direction: row;
+    }
+
+    .card header {
+        justify-content: left;
+    }
+
+    .card{
+        flex: 0 0 250px;
+        align-self: center;
+    }
+
+    body > header {
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .about > h1 {
+        padding-top: 8%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #logo {
+        animation: none;
+    }
+}
+
+@media print {
+    
+    #logo {
+        animation: none;
+    }
+
+    body {
+        background-image: none;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+
+    #gallery, .gallery {
+        display: none;
+    }
+
+    .nav_links {
+        flex-direction: row;
+        gap: 175px
+    }
+
+    .card {
+        border: 2px #45ADDD solid;
+        flex-basis: 325px;
+    }
+
+    .pricing {
+        flex-wrap: nowrap;
+        align-items: flex-end;
+    }
+
+    .card > ul li:nth-child(2)::after {
+        content: "👍";
+    }
+}
