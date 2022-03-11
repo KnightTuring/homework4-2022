@@ -1,4 +1,3 @@
-/* Requirement 1 */
 body {
     font-family: 'Poppins', serif;
     /* Font size can be reduced to ensure the 1st and 3rd cards are of the same height */
@@ -7,7 +6,6 @@ body {
     background-color: #f1f1f1;
 }
 
-/* Requirement 2 */
 body > header {
     display: flex;
     flex-wrap: wrap;
@@ -15,18 +13,15 @@ body > header {
     align-items: center;
 }
 
-/* Requirement 3 */
 .nav_links {
     display: flex;
     flex-direction: column;
 }
 
-/* Requirement 4 */
 a {
     color: blue;
 }
 
-/* Requirement 5 */
 .card > header {
     background-color: #288088;
     border: 2px solid #45ADAD;
@@ -49,7 +44,6 @@ a {
     border-bottom: 2px solid #45ADAD;
 }
 
-/* Requirement 7 */
 .pricing {
     display: flex;
     flex-direction: row;
@@ -57,10 +51,10 @@ a {
     justify-content: center;
 }
 
-/* Requirement 8 */
 .card {
     flex-basis: 450px;
 }
+
 .card header {
     display: flex;
 }
@@ -97,8 +91,6 @@ a {
 .nav_links {
     display: flex;
 }
-
-
 
 @media screen and (min-width: 900px) {
 
